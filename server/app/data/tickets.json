@@ -4,6 +4,7 @@
       "id": 1,
       "airline": "FlyAir",
       "from": "JFK",
+      "to": "LHR",
       "airlineImage": "https://example.com/airlines/flyair.png",
       "flightDuration": "5h 30m",
       "departureTime": "08:00 AM",
@@ -31,6 +32,8 @@
     {
       "id": 2,
       "airline": "SkyJet",
+      "from": "JFK",
+      "to": "LHR",
       "airlineImage": "https://example.com/airlines/skyjet.png",
       "flightDuration": "3h 45m",
       "departureTime": "10:30 AM",
@@ -47,6 +50,8 @@
     {
       "id": 3,
       "airline": "AirConnect",
+      "from": "LSV",
+      "to": "LHR",
       "airlineImage": "https://example.com/airlines/airconnect.png",
       "flightDuration": "4h 15m",
       "departureTime": "09:45 AM",
@@ -69,6 +74,8 @@
     {
       "id": 4,
       "airline": "AeroWave",
+      "from": "JFK",
+      "to": "LHR",
       "airlineImage": "https://example.com/airlines/aerowave.png",
       "flightDuration": "6h 10m",
       "departureTime": "11:00 AM",
@@ -96,6 +103,8 @@
     {
       "id": 5,
       "airline": "SwiftFly",
+      "from": "MMR",
+      "to": "LHR",
       "airlineImage": "https://example.com/airlines/swiftfly.png",
       "flightDuration": "7h 20m",
       "departureTime": "07:15 AM",
@@ -123,6 +132,8 @@
     {
       "id": 6,
       "airline": "WingStar",
+      "from": "LHJ",
+      "to": "LHR",
       "airlineImage": "https://example.com/airlines/wingstar.png",
       "flightDuration": "5h 55m",
       "departureTime": "12:45 PM",
@@ -145,6 +156,8 @@
     {
       "id": 7,
       "airline": "SkyGlobe",
+      "from": "PRM",
+      "to": "LHR",
       "airlineImage": "https://example.com/airlines/skyglobe.png",
       "flightDuration": "6h 30m",
       "departureTime": "10:00 AM",
@@ -167,6 +180,8 @@
     {
       "id": 8,
       "airline": "OceanWings",
+      "from": "RUS",
+      "to": "LHR",
       "airlineImage": "https://example.com/airlines/oceanwings.png",
       "flightDuration": "4h 40m",
       "departureTime": "11:30 AM",

@@ -20,12 +20,11 @@ const Hero = () => {
   const [fromAirport, setFromAirport] = useState("");
   const [toAirport, setToAirport] = useState("");
   const [dateRange, setDateRange] = useState([null, null]);
+  const [startDate, endDate] = dateRange;
   const [passengerCount, setPassengerCount] = useState(1);
 
   const [isFromDropdownOpen, setIsFromDropdownOpen] = useState(false);
   const [isToDropdownOpen, setIsToDropdownOpen] = useState(false);
-
-  const [startDate, endDate] = dateRange;
 
   const navigate = useNavigate();
 
@@ -33,11 +32,7 @@ const Hero = () => {
     const searchParams = new URLSearchParams({
       fromAirport,
       toAirport,
-      startDate: startDate && startDate.toISOString(),
-      endDate: endDate && endDate.toISOString(),
-      passengerCount,
     });
-
     navigate(`/tickets?${searchParams.toString()}`);
   };
 

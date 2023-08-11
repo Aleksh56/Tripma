@@ -8,7 +8,7 @@ import { BsCalendarWeek } from "react-icons/bs";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import TicketsFilters from "./TicketsFilters";
-import ticketData from "../../api/tickets.json";
+import Api from "../../api/api";
 
 const TicketsList = () => {
   const [dateRange, setDateRange] = useState([null, null]);
@@ -19,43 +19,28 @@ const TicketsList = () => {
   const [passengers, setPassengers] = useState(1);
 
   useEffect(() => {
-    const searchParams = new URLSearchParams(window.location.search);
-    const fromAirport = searchParams.get("fromAirport");
-    const toAirport = searchParams.get("toAirport");
-    const startDate = new Date(searchParams.get("startDate"));
-    const endDate = new Date(searchParams.get("endDate"));
-    const passengerCount = parseInt(searchParams.get("passengerCount"));
+    const fetchData = async () => {
+      const searchParams = new URLSearchParams(window.location.search);
+      const fromAirport = searchParams.get("fromAirport");
+      const toAirport = searchParams.get("toAirport");
 
-    setFromAir(fromAirport);
-    setDateRange([startDate, endDate]);
-    setPassengers(passengerCount);
+      setFromAir(fromAirport);
 
-    const foundTickets = searchTickets(
-      fromAirport,
-      toAirport,
-      startDate,
-      endDate,
-      passengerCount
-    );
-    console.log(foundTickets);
-    setTickets(foundTickets);
-    setLoading(false);
+      try {
+        const foundTickets = await Api.getTickets({
+          destination: fromAirport,
+          origin: toAirport,
+        });
+        setTickets(foundTickets);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching tickets:", error);
+        setLoading(false);
+      }
+    };
+
+    fetchData();
   }, []);
-
-  const searchTickets = (fromAirport, startDate, endDate, passengerCount) => {
-    return ticketData.tickets.filter((ticket) => {
-      const matchFrom = !fromAirport || ticket.from === fromAirport;
-      // const matchDate =
-      //   !startDate ||
-      //   !endDate ||
-      //   (new Date(ticket.startDate) >= startDate &&
-      //     new Date(ticket.endDate) <= endDate);
-      // const matchPassengerCount =
-      //   !passengerCount || ticket.passengerCount >= passengerCount;
-      // Переписать функцию поиска и убрать ее в Utils
-      return matchFrom;
-    });
-  };
 
   return (
     <div className="container mx-auto flex flex-col items-start">

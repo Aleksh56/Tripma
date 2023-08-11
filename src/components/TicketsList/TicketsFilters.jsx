@@ -9,8 +9,6 @@ const TicketsFilters = ({ handleFilterChange }) => {
   const [more, setMore] = useState("");
 
   const handleApplyFilters = () => {
-    // Обновляем список авиабилетов на основе выбранных фильтров
-    // Вызываем функцию handleFilterChange с новыми значениями фильтров
     handleFilterChange({
       maxPrice,
       shops,
