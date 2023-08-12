@@ -1,0 +1,7 @@
+1) Make all API calls with try/catch
+2) Rewrite <form> as a reusable component
+3) Make a refactoring of file structure
+4) Create a "Client" folder for Front-end
+5) Rewrite package.json
+6) Add tests
+7) Write NotFound Page

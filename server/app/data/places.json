@@ -1,0 +1,44 @@
+[
+  {
+    "country": "Spain",
+    "airport_code": "BCN",
+    "places": [
+      {
+        "name": "Park Güell",
+        "type": "Park",
+        "description": "Park Güell is a famous public park with colorful mosaics and architectural elements designed by Antoni Gaudí."
+      },
+      {
+        "name": "La Boqueria Market",
+        "type": "Market",
+        "description": "La Boqueria is a vibrant food market in Barcelona, offering a variety of fresh produce, meats, and local cuisine."
+      },
+      {
+        "name": "Sagrada Família",
+        "type": "Landmark",
+        "description": "Sagrada Família is an iconic basilica designed by Antoni Gaudí, known for its intricate architecture and ongoing construction."
+      }
+    ]
+  },
+  {
+    "country": "France",
+    "airport_code": "LHR",
+    "places": [
+      {
+        "name": "Louvre Museum",
+        "type": "Museum",
+        "description": "The Louvre is one of the world's largest and most famous art museums, housing a diverse collection of artworks."
+      },
+      {
+        "name": "Eiffel Tower",
+        "type": "Landmark",
+        "description": "The Eiffel Tower is a symbol of Paris and offers breathtaking views of the city from its observation decks."
+      },
+      {
+        "name": "Montmartre",
+        "type": "Neighborhood",
+        "description": "Montmartre is a historic neighborhood known for its artistic heritage, charming streets, and the Sacré-Cœur Basilica."
+      }
+    ]
+  }
+]
