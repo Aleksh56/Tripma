@@ -31,7 +31,7 @@ const TicketsList = () => {
           destination: fromAirport,
           origin: toAirport,
         });
-        setTickets(foundTickets);
+        setTickets(foundTickets.tickets);
         setLoading(false);
       } catch (error) {
         console.error("Error fetching tickets:", error);

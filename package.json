@@ -1,7 +1,9 @@
 {
   "name": "tripma",
   "version": "0.1.0",
+  "description": "",
   "private": true,
+  "author": "Alexand Averianov <averyanovv.a@yandex.ru>",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
