@@ -1,16 +1,13 @@
 import React from "react";
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import logo from "../../assets/images/Logo_large.png";
 
 const Footer = () => {
   return (
     <footer className="py-7">
       <div className="container mx-auto grid grid-cols-5 gap-8 pb-[30px]">
         <div className="col-span-1">
-          <img
-            src="path/to/logo.png"
-            alt="Logo"
-            className="w-16 h-16 object-contain"
-          />
+          <img src={logo} alt="Logo" className="w-16 h-16 object-contain" />
         </div>
 
         <div className="col-span-1">
